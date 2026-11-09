@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhamat Euro Xavi | Personal Profile</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #222;
+    background: linear-gradient(
+        135deg,
+        #080808,
+        #555,
+        #aaa,
+        #fff
+    );
+    background-attachment: fixed;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+/* HERO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 40px;
+}
+
+.hero-text {
+    color: white;
+    max-width: 600px;
+}
+
+.hero-text h3 {
+    letter-spacing: 5px;
+    font-size: 15px;
+    color: #ccc;
+}
+
+.hero-text h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero-text h1 span {
+    color: #ccc;
+}
+
+.hero-text p {
+    color: #ddd;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #aaa;
+    transform: translateY(-5px);
+}
+
+/* MONOGRAM */
+.profile {
+    width: 300px;
+    height: 300px;
+    min-width: 240px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #eee, #555);
+    border: 5px solid rgba(255,255,255,.5);
+    box-shadow: 0 0 50px rgba(255,255,255,.25);
+}
+
+.profile h1 {
+    font-size: 100px;
+    color: #222;
+    letter-spacing: -10px;
+}
+
+/* CONTENT */
+section.content {
+    background: #f4f4f4;
+    padding: 80px 10%;
+    border-radius: 35px 35px 0 0;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    color: #777;
+}
+
+/* ABOUT */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.about-text {
+    line-height: 1.9;
+    color: #555;
+}
+
+.bio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.bio-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #ddd;
+}
+
+.bio-item small {
+    color: #888;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bio-item p {
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 90px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px #ddd;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px #ccc;
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* CONTACT */
+.contact {
+    background: linear-gradient(120deg, #111, #666);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.contact p {
+    color: #ddd;
+    margin-top: 12px;
+}
+
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 800px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile h1 {
+        font-size: 75px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 500px) {
+    nav {
+        padding: 20px 5%;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .bio {
+        grid-template-columns: 1fr;
+    }
+
+    section.content {
+        padding: 60px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">ME XAVI.</div>
+    <div>
+        <a href="#about">Tentang</a>
+        <a href="#skill">Keahlian</a>
+        <a href="#hobby">Hobi</a>
+        <a href="#contact">Kontak</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-text">
+        <h3>WELCOME TO MY WEBSITE</h3>
+
+        <h1>
+            Muhamat<br>
+            <span>Euro Xavi.</span>
+        </h1>
+
+        <p>
+            Selamat datang di website pribadi saya.
+            Saya adalah seseorang yang tertarik dengan
+            teknologi, kreativitas, desain, dan dunia
+            jaringan Fiber Optic.
+        </p>
+
+        <a href="#about" class="btn">Kenali Saya</a>
+    </div>
+
+    <div class="profile">
+        <h1>ME</h1>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="content">
+
+    <!-- ABOUT -->
+    <div id="about">
+        <div class="heading">
+            <h2>Tentang Saya</h2>
+            <p>Get To Know Me Better</p>
+        </div>
+
+        <div class="about">
+            <div class="about-text">
+                <h2>Halo, Saya Muhamat Euro Xavi!</h2>
+                <br>
+                Saya merupakan pribadi yang memiliki
+                ketertarikan dalam bidang teknologi
+                dan kreativitas.
+
+                <br><br>
+
+                Saya memiliki keterampilan dalam
+                instalasi kabel Fiber Optic serta
+                menyukai kegiatan menggambar,
+                mendesain, dan mendengarkan musik.
+
+                <br><br>
+
+                Saya selalu tertarik untuk belajar
+                hal baru, mengembangkan kemampuan,
+                dan mendapatkan pengalaman baru.
+            </div>
+
+            <div class="bio">
+                <div class="bio-item">
+                    <small>Nama Lengkap</small>
+                    <p>Muhamat Euro Xavi</p>
+                </div>
+
+                <div class="bio-item">
+                    <small>Domisili</small>
+                    <p>Kauman, Kota Blitar</p>
+                </div>
+
+                <div class="bio-item">
+                    <small>Email</small>
+                    <p>muhamadeuroxavy@gmail.com</p>
+                </div>
+
+                <div class="bio-item">
+                    <small>Bidang</small>
+                    <p>Fiber Optic & Desain</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILL -->
+    <div id="skill">
+        <div class="heading">
+            <h2>Keahlian Saya</h2>
+            <p>My Skills & Abilities</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="icon">🔌</div>
+                <h3>Fiber Optic</h3>
+                <p>
+                    Memiliki kemampuan dalam
+                    instalasi kabel Fiber Optic
+                    untuk jaringan telekomunikasi.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>Desain</h3>
+                <p>
+                    Memiliki ketertarikan dalam
+                    desain visual dan kreativitas
+                    untuk menghasilkan karya menarik.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Teknologi</h3>
+                <p>
+                    Tertarik mempelajari perkembangan
+                    teknologi dan dunia digital.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOBBY -->
+    <div id="hobby">
+        <div class="heading">
+            <h2>Hobi Saya</h2>
+            <p>Things I Love To Do</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="icon">✏️</div>
+                <h3>Menggambar</h3>
+                <p>
+                    Mengekspresikan imajinasi
+                    melalui gambar dan karya seni.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🖌️</div>
+                <h3>Mendesain</h3>
+                <p>
+                    Menciptakan desain visual
+                    yang kreatif dan menarik.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎧</div>
+                <h3>Mendengarkan Musik</h3>
+                <p>
+                    Menikmati musik untuk hiburan
+                    dan mencari inspirasi.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="contact">
+        <h2>Mari Terhubung!</h2>
+        <p>
+            Terima kasih sudah mengunjungi
+            website pribadi saya.
+        </p>
+
+        <a href="mailto:muhamadeuroxavy@gmail.com"
+           class="btn">
+           Hubungi Saya
+        </a>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Muhamat Euro Xavi | Personal Website
+</footer>
+
+</body>
+</html>
