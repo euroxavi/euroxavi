@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamat Euro Xavi - Personal Website & Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0b0c10',
+                        darkCard: 'rgba(255, 255, 255, 0.03)',
+                        lightGrad: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Obsidian Black-to-Light Gradient Background */
+        body {
+            background: linear-gradient(135deg, #090a0f 0%, #171923 40%, #2d3748 75%, #e2e8f0 95%, #ffffff 100%);
+            background-attachment: fixed;
+            color: #f1f5f9;
+        }
+
+        /* Subtle Glassmorphism Card Style */
+        .glass-card {
+            background: rgba(18, 20, 29, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 12px 40px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        /* Text Gradients */
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-light {
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Subtle Ambient Glow Effect */
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+            border-radius: 50%;
+        }
+
+        /* Smooth Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090a0f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans selection:bg-white selection:text-black relative overflow-x-hidden">
+
+    <!-- Ambient Glowing Orbs -->
+    <div class="glow-effect top-10 left-10"></div>
+    <div class="glow-effect top-1/3 right-10"></div>
+    <div class="glow-effect bottom-20 left-1/4"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-heading font-bold text-xl tracking-wider text-white hover:text-slate-300 transition-colors">
+                EURO<span class="text-slate-400">.XAVI</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-white transition-colors">Tentang</a>
+                <a href="#skills" class="hover:text-white transition-colors">Keterampilan</a>
+                <a href="#hobbies" class="hover:text-white transition-colors">Hobi</a>
+                <a href="#contact" class="hover:text-white transition-colors">Kontak</a>
+            </div>
+            <a href="#contact" class="px-4 py-2 rounded-full border border-white/20 text-xs font-semibold hover:bg-white hover:text-black transition-all duration-300">
+                Hubungi Saya
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-6 pt-32 pb-20 space-y-24">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="text-center space-y-8 pt-8">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-white/15 bg-white/5 text-xs text-slate-300 backdrop-blur-sm animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Open for Opportunities & Networking</span>
+            </div>
+
+            <!-- Avatar Silhouette / Graphic -->
+            <div class="relative w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full p-1 bg-gradient-to-b from-white/40 to-white/5 shadow-2xl">
+                <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden border border-white/20">
+                    <span class="font-heading text-4xl md:text-5xl font-extrabold text-white tracking-widest">MEX</span>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="font-heading text-4xl md:text-6xl font-extrabold tracking-tight text-gradient">
+                    Muhamat Euro Xavi
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
+                    Network Hardware Technician & Creative Designer yang berdomisili di Kota Blitar.
+                </p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="https://wa.me/6282228607139" target="_blank" rel="noopener noreferrer" 
+                   class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-950 font-semibold hover:bg-slate-200 transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands font-bold fa-whatsapp text-lg"></i>
+                    <span>Hubungi via WhatsApp</span>
+                </a>
+                <a href="mailto:muhamadeuroxavy@gmail.com" 
+                   class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card text-white font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Kirim Email</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- BIOGRAFI / TENTANG SAYA -->
+        <section id="about" class="space-y-6">
+            <div class="text-center space-y-2">
+                <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Profil Singkat</h2>
+                <h3 class="font-heading text-3xl font-bold text-white">Tentang Saya</h3>
+            </div>
+
+            <div class="glass-card p-8 md:p-10 rounded-2xl relative overflow-hidden group">
+                <div class="space-y-4 text-slate-300 leading-relaxed">
+                    <p class="text-base md:text-lg">
+                        Halo! Saya <span class="text-white font-semibold">Muhamat Euro Xavi</span>, bertempat tinggal di Kota Blitar, Jawa Timur. Saya adalah seorang individu yang berdedikasi tinggi dan memiliki ketertarikan mendalam pada infrastruktur jaringan serta dunia seni kreatif visual.
+                    </p>
+                    <p class="text-base md:text-lg">
+                        Dengan kombinasi keahlian teknis pada instalasi jaringan <span class="text-white font-semibold">Fiber Optic</span> serta kreativitas dalam bidang <span class="text-white font-semibold">desain grafis & gambar</span>, saya siap memberikan solusi yang handal, efisien, dan memiliki estetika visual yang tinggi.
+                    </p>
+                </div>
+                <!-- Card Background Accent -->
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/5 rounded-full blur-2xl group-hover:bg-white/10 transition-all"></div>
+            </div>
+        </section>
+
+        <!-- KETERAMPILAN UTAMA -->
+        <section id="skills" class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Keahlian Teknis</h2>
+                <h3 class="font-heading text-3xl font-bold text-white">Keterampilan Utama</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl transition-all duration-300 space-y-4 relative group">
+                    <div class="w-14 h-14 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-xl font-bold text-white">Instalasi Kabel Fiber Optic</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Memahami teknis penarikan, penyambungan (*splicing*), pemeliharaan, serta penataan jalur kabel Fiber Optic untuk infrastruktur jaringan broadband cepat dan stabil.
+                        </p>
+                    </div>
+                    <ul class="pt-2 space-y-1.5 text-xs text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> FO Splicing & Termination</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Cable Routing & Management</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Troubleshooting Jaringan Fisik</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl transition-all duration-300 space-y-4 relative group">
+                    <div class="w-14 h-14 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-xl font-bold text-white">Desain Visual & Digital Art</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Mampu menuangkan gagasan ke dalam bentuk ilustrasi visual, desain tata letak media, serta materi promosi grafis yang modern dan estetis.
+                        </p>
+                    </div>
+                    <ul class="pt-2 space-y-1.5 text-xs text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Digital & Manual Drawing</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Graphic & Layout Design</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Visual Branding Concept</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOBI & MINAT -->
+        <section id="hobbies" class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Kegemaran</h2>
+                <h3 class="font-heading text-3xl font-bold text-white">Hobi & Minat</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <!-- Hobby 1 -->
+                <div class="glass-card p-6 rounded-2xl text-center space-y-3 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-white/10 flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h4 class="font-semibold text-white">Menggambar</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Mengekspresikan ide dan imajinasi melalui sketsa gambar tangan maupun seni digital.
+                    </p>
+                </div>
+
+                <!-- Hobby 2 -->
+                <div class="glass-card p-6 rounded-2xl text-center space-y-3 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-white/10 flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h4 class="font-semibold text-white">Mendesain</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Merancang komposisi visual yang harmonis, menarik, dan berorientasi pada fungsionalitas.
+                    </p>
+                </div>
+
+                <!-- Hobby 3 -->
+                <div class="glass-card p-6 rounded-2xl text-center space-y-3 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-white/10 flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+                    <h4 class="font-semibold text-white">Mendengarkan Musik</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Mencari inspirasi dan menjaga fokus produktivitas lewat lantunan nada dan irama musik.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFORMASI KONTAK -->
+        <section id="contact" class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Mari Terhubung</h2>
+                <h3 class="font-heading text-3xl font-bold text-white">Informasi Kontak</h3>
+            </div>
+
+            <div class="glass-card p-8 md:p-10 rounded-2xl max-w-3xl mx-auto space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Email Card -->
+                    <a href="mailto:muhamadeuroxavy@gmail.com" class="p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors flex items-start space-x-4 border border-white/5">
+                        <div class="p-3 rounded-lg bg-white/10 text-white">
+                            <i class="fa-regular fa-envelope text-xl"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs text-slate-400 block font-medium">Email</span>
+                            <span class="text-sm font-semibold text-white break-all">muhamadeuroxavy@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <!-- Phone Card -->
+                    <a href="https://wa.me/6282228607139" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors flex items-start space-x-4 border border-white/5">
+                        <div class="p-3 rounded-lg bg-white/10 text-white">
+                            <i class="fa-solid fa-phone text-xl"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs text-slate-400 block font-medium">No. Telepon / WA</span>
+                            <span class="text-sm font-semibold text-white">082228607139</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Address Card -->
+                <div class="p-4 rounded-xl bg-white/5 flex items-start space-x-4 border border-white/5">
+                    <div class="p-3 rounded-lg bg-white/10 text-white">
+                        <i class="fa-solid fa-location-dot text-xl"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-xs text-slate-400 block font-medium">Alamat Tempat Tinggal</span>
+                        <span class="text-sm font-semibold text-white leading-relaxed block">
+                            Jl. Pandan, Kelurahan Kauman, Kota Blitar, Jawa Timur, Indonesia
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION (Light Slate Contrast Transition at Bottom) -->
+    <footer class="border-t border-slate-700/50 bg-slate-900/80 backdrop-blur-md py-8">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+            <p>&copy; <span id="year"></span> Muhamat Euro Xavi. All rights reserved.</p>
+            <p class="flex items-center gap-1">
+                Hosted with <i class="fa-solid fa-heart text-slate-300"></i> on GitHub Pages
+            </p>
+        </div>
+    </footer>
+
+    <!-- Dynamic Year Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
